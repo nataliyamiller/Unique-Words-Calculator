@@ -23,6 +23,15 @@ var sortedValues = function(wordsObject) {
     return sorted;
 }
 
+var isUserUnique = function(userInput) {
+  var sortedValues = uniqueWordsCalculator(userInput);
+  if (sortedValues[0][1] === 1) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 var uniqueWordsCalculator = function(userInput) {
   var updatedInput = updatedUserInput(userInput);
   var inputAsObject = wordsObject(updatedInput);

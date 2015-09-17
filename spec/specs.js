@@ -1,13 +1,4 @@
 
-// describe('uniqueWordIdentifier', function() {
-//   it("returns true if array has duplicate words", function() {
-//     expect(uniqueWordIdentifier(["hello", "world", "hello"])).to.equal(true);
-//   });
-//
-//   it("returns false if array doesn't have duplicate words", function() {
-//     expect(uniqueWordIdentifier(["great", "world", "hello"])).to.equal(false);
-//   });
-// });
 
 describe('updatedUserInput', function() {
   it("removes special characters and returns user's input as an array of words in lower case format", function() {
@@ -25,6 +16,16 @@ describe('sortedValues', function() {
   it("will turn an object to an array of arrays and sort it by numeric values in a descending order", function() {
     var userObject = {"hello": 3, "world": 1};
     expect(sortedValues(userObject)).to.eql([["hello", 3], ["world", 1]]);
+  });
+});
+
+describe('isUserUnique', function() {
+  it("returns true if user's input doesn't have duplicate words", function() {
+    expect(isUserUnique("Hello, great world")).to.equal(true);
+  });
+
+  it("returns false if user's input has duplicate words", function() {
+    expect(isUserUnique("Hello, hello, so great world")).to.equal(false);
   });
 });
 
