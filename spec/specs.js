@@ -1,17 +1,30 @@
 
-describe('uniqueWordIdentifier', function() {
-  it("returns true if array has duplicate words", function() {
-    expect(uniqueWordIdentifier("hello world hello")).to.equal(true);
-  });
+// describe('uniqueWordIdentifier', function() {
+//   it("returns true if array has duplicate words", function() {
+//     expect(uniqueWordIdentifier("hello world hello")).to.equal(true);
+//   });
+//
+//   it("returns false if array doesn't have duplicate words", function() {
+//     expect(uniqueWordIdentifier("Great world hello")).to.equal(false);
+//   });
+// });
 
-  it("returns false if array doesn't have duplicate words", function() {
-    expect(uniqueWordIdentifier("Great world hello")).to.equal(false);
+describe('updatedUserInput', function() {
+  it("removes special characters and returns user's input as an array of words in lower case format", function() {
+    expect(updatedUserInput("Hello world, hello: I am here")).to.eql(["hello", "world", "hello", "i", "am", "here"]);
   });
 });
 
 
-describe('uniquWordCalculator', function() {
-  it("returns an object that contains unique words and amounts those words appear in the user's input", function() {
-    expect(uniqueWordCalculator("hello world hello hello again")).to.eql({"hello": 3, "world": 1, "again": 1});
+describe('wordsObject', function() {
+  it("turnes array of user's words into an object of unique words as keys, and numbers of those words duplications as values", function() {
+    expect(wordsObject(["hello", "world", "hello", "hello", "again"])).to.eql({"hello": 3, "world": 1, "again": 1});
+  });
+});
+
+describe('sortedValues', function() {
+  it("will turn an object to an array of arrays and sort it by numeric values in a descending order", function() {
+    var userObject = {"hello": 3, "world": 1};
+    expect(sortedValues(userObject)).to.eql([["hello", 3], ["world", 1]]);
   });
 });
