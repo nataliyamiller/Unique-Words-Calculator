@@ -37,3 +37,18 @@ var uniqueWordsCalculator = function(userInput) {
   var inputAsObject = wordsObject(updatedInput);
   return sortedValues(inputAsObject);
 };
+
+$(document).ready(function() {
+  $("form#sentence").submit(function(event) {
+    var userInput = $("input#user-input").val();
+    var result1 = isUserUnique(userInput);
+    var result2 = uniqueWordsCalculator(userInput);
+
+    if(result1) {
+      $("#result-1").show();
+    } else {
+      $("#result-1").hide();
+    }
+    event.preventDefault();
+  });
+});

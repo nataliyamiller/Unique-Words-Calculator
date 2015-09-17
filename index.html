@@ -9,9 +9,10 @@
   </head>
   <body>
       <div class="container">
-        <h1>Word Order</h1>
+        <h1>Unique Words Calculator</h1>
+        <h2>Check if you are using duplicate words in your speech :-)</h2>
 
-        <form id="word-order">
+        <form id="sentence">
           <div class="form-group">
             <label for="user-input">Enter a to see how many words are repeting themselves!</label>
             <input id="user-input" type="text">
@@ -20,8 +21,11 @@
           <button type="submit" class="btn">Find out!</button>
         </form>
 
-        <div id="result">
-          <p>Here is your result:  <span class="counted-words"></span>.</p>
+        <div id="result-1">
+          <p>You did not use any duplicate words in your sentense(s)! Wow!</p>
+        </div>
+        <div id="result-2">
+          <p>Here is the result: <span class="not-unique"></span></p>
         </div>
       </div>
   </body>
