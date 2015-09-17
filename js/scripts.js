@@ -41,13 +41,18 @@ var uniqueWordsCalculator = function(userInput) {
 $(document).ready(function() {
   $("form#sentence").submit(function(event) {
     var userInput = $("input#user-input").val();
-    var result1 = isUserUnique(userInput);
-    var result2 = uniqueWordsCalculator(userInput);
+    var unique = isUserUnique(userInput);
+    var notUnique = uniqueWordsCalculator(userInput);
 
-    if(result1) {
+    if(unique) {
       $("#result-1").show();
+      $("#result-2").hide();
     } else {
       $("#result-1").hide();
+      $("#result-2").show();
+      $("ul").empty();
+      for (var i = 0; i < notUnique.length; i++)
+      $("ul").append("<li>" + notUnique[i][0] + ": " + notUnique[i][1] + "</li>");
     }
     event.preventDefault();
   });
