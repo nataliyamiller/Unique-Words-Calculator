@@ -1,14 +1,3 @@
-
-// var uniqueWordIdentifier = function(userInput) {
-//   var words = userInput.split(" ").sort();
-//   for (var i = 0; i < words.length; i++) {
-//     if (words[i] === words[i+1]) {
-//       return true;
-//     }
-//   }
-//   return false;
-// };
-
 var updatedUserInput = function(userInput) {
   return userInput.toLowerCase().replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"").split(" ");
 }
@@ -32,4 +21,10 @@ var sortedValues = function(wordsObject) {
     sorted.sort(function(a, b) {return b[1] - a[1]});
   }
     return sorted;
+}
+
+var uniqueWordsCalculator = function(userInput) {
+  var updatedInput = updatedUserInput(userInput);
+  var inputAsObject = wordsObject(updatedInput);
+  return sortedValues(inputAsObject);
 }
