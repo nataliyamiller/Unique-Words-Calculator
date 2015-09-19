@@ -1,4 +1,4 @@
-# Pig Latin Transformer
+# Duplicate Words Calculator
 
 ####_by Nataliya Bareeva-Miller_
 
@@ -17,7 +17,7 @@
 
 ## Tests
 
-* This application includes BDD tests written with Mocha and Chai. To run those tests, clone this repository and open a spec-funner.html file in your browser.
+* This application includes BDD tests written with Mocha and Chai. To run those tests, clone this repository and open a spec-runner.html file in your browser.
 
 
 ## Technologies Used
